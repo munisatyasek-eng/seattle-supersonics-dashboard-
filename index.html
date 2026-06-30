@@ -318,7 +318,7 @@
   SEATTLE SUPERSONICS &nbsp;·&nbsp; <b>2024–25 EXPANSION DRAFT</b> &nbsp;·&nbsp; RETURN OF THE SONICS
 </footer>
 
-<script src="./Seattle Supersonics — 2024-25 Expansion Draft_files/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <script>
 const picks = [
   {name:"Payton Pritchard", from:"Boston Celtics", ppg:14, rpg:3, apg:2},
@@ -329,6 +329,7 @@ const picks = [
 ];
 
 const picksTable = document.getElementById('picksTable');
+picksTable.innerHTML = ''; // Clears pre-saved text
 picks.forEach((p,i)=>{
   const total = (p.ppg+p.rpg+p.apg).toFixed(1);
   picksTable.innerHTML += `
@@ -348,6 +349,7 @@ picks.forEach((p,i)=>{
 });
 
 const rosterBody = document.getElementById('rosterBody');
+rosterBody.innerHTML = ''; // Clears pre-saved text
 picks.forEach(p=>{
   rosterBody.innerHTML += `
     <tr>
@@ -405,6 +407,3 @@ new Chart(document.getElementById('lossChart'), {
   }
 });
 </script>
-
-
-</body></html>
